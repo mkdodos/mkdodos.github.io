@@ -1,22 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-    <title>Vue Component 123</title>
-</head>
-<body>
-    <div id="app">
-       
-      </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
- 
-  
-  <script>
- 
-     </script> 
+    <title>Vue Component</title>
+</head>
+
+<body>
+    <div id="components-demo">
+        <button-counter></button-counter>
+        <button-counter></button-counter>
+        <button-counter></button-counter>
+
+        <blog-post title="button-counter"></blog-post>
+        <blog-post title="blog-post"></blog-post>
+        
+
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+
+    <script>
+        // Define a new component called button-counter
+        Vue.component('button-counter', {
+           
+            data () {
+                return {
+                    count: 0
+                }
+            },
+
+            
+            template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
+        })
+
+        Vue.component('blog-post', {
+  props: ['title'],
+  template: '<h1>{{ title }}</h1>'
+})
+
+
+
+
+        new Vue({ el: '#components-demo' })
+
+
+    </script>
 </body>
+
 </html>
