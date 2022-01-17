@@ -4,9 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css">
     <title>TestWeb</title>
 </head>
 <body>
-    123 TEst
+    <div id="app">
+        <v-data-table :items="desserts" :headers="headers">
+        </v-data-table> 
+      </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.2/vuetify.min.js"></script>
+  
+  <script>
+         new Vue({
+  el: "#app",
+  vuetify: new Vuetify(),
+  data: {
+    desserts: [
+      {
+        name: "愷軒",
+        point: "55",
+        date: "2022/1/15"
+      },
+      {
+        name: "宜君",
+        point: "65",
+        date: "2022/1/14"
+      },
+      {
+        name: "馬克",
+        point: "60",
+        date: "2022/1/13"
+      }
+    ],
+    headers: [
+      { text: "姓名", value: "name" },
+      { text: "分數", value: "point" },
+      { text: "日期", value: "date" }
+    ]
+  }
+});
+
+     </script> 
 </body>
 </html>
