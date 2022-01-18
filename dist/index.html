@@ -1,0 +1,56 @@
+<<<<<<< HEAD
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><title>firstapp</title><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css"><link href="/css/chunk-vendors.9a9e7b36.css" rel="preload" as="style"><link href="/js/app.c655b568.js" rel="preload" as="script"><link href="/js/chunk-vendors.56ef7350.js" rel="preload" as="script"><link href="/css/chunk-vendors.9a9e7b36.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but firstapp doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div><script src="/js/chunk-vendors.56ef7350.js"></script><script src="/js/app.c655b568.js"></script></body></html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css">
+    <title>TestWeb</title>
+</head>
+<body>
+    <div id="app">
+        <v-data-table :items="desserts" :headers="headers">
+        </v-data-table> 
+      </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.2/vuetify.min.js"></script>
+  
+  <script>
+         new Vue({
+  el: "#app",
+  vuetify: new Vuetify(),
+  data: {
+    desserts: [
+      {
+        name: "A1",
+        point: "55",
+        date: "2022/1/15"
+      },
+      {
+        name: "B1",
+        point: "65",
+        date: "2022/1/14"
+      },
+      {
+        name: "C1",
+        point: "60",
+        date: "2022/1/13"
+      }
+    ],
+    headers: [
+      { text: "姓名", value: "name" },
+      { text: "分數", value: "point" },
+      { text: "日期", value: "date" }
+    ]
+  }
+});
+
+     </script> 
+</body>
+</html>
+>>>>>>> 32d248652536354a7d6a0b44815e006e22ba9df9
